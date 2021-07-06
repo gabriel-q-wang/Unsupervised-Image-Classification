@@ -1,0 +1,23 @@
+dataset_name: "cifar10"
+dataset_path: "/xmotors_ai_shared/team/perception/adam/datasets/cifar10"
+log_dir: "/xmotors_ai_shared/team/perception/adam/checkpoints"
+
+model_name: "tmp"
+network_name: "resnet18"
+num_classes: 10
+pretrained_imagenet: True
+
+batch_size: 256
+num_epochs: 500
+learning_rate: 1e-4
+scheduler_step_size: 400
+weight_decay: 1e-4
+momentum: 0.9 # momentum for SGD
+use_cuda: True
+device: 'cuda:0'
+loss_type: "supervised" # can be supervised or unsupervised
+num_workers: 0
+log_frequency: 10 # How often to log in tensorboard during early phase (before 1st epoch)
+save_frequency: 100 # how many epochs to wait before saving model
+load_weights_folder: NULL
+
